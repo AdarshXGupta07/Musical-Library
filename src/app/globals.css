@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* Custom theme values */
+:root {
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+}
+
+/* Spotlight animation */
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+/* Inline theme values */
+:root {
+   --font-display: "Inter", "sans-serif";
+  --color-primary-500: oklch(0.84 0.18 117.33);
+  --spacing: 0.25rem;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration, 80s) var(--animation-direction, forwards) linear infinite;
+}
